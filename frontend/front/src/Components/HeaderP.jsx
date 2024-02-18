@@ -1,6 +1,35 @@
 import React, { useState } from "react";
 
 function HeaderP() {
+ /* const storedData = localStorage.getItem("user");
+  const parsedData = JSON.parse(storedData);
+  
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `http://localhost:8000/user/getuser/${parsedData.email}`
+        );
+        const result = await response.json();
+        console.log("API Response:", result);
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+    console.log("Stored Email:", parsedData.email);
+
+    console.log("this is dataaa", data);
+  }, []);
+  
+  if (!data) {
+      return <div>Loading...</div>;
+  }
+
+*/
   const [showPopup, setShowPopup] = useState(false);
 
   const togglePopup = () => {
