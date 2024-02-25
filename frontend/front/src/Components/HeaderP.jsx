@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function HeaderP() {
- /* const storedData = localStorage.getItem("user");
+ const storedData = localStorage.getItem("user");
   const parsedData = JSON.parse(storedData);
   
   const [data, setData] = useState(null);
-
+  const [showPopup, setShowPopup] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/user/getuser/${parsedData.email}`
+          `http://localhost:8000/auth/user/${parsedData.email}`
         );
         const result = await response.json();
         console.log("API Response:", result);
@@ -29,8 +29,7 @@ function HeaderP() {
       return <div>Loading...</div>;
   }
 
-*/
-  const [showPopup, setShowPopup] = useState(false);
+
 
   const togglePopup = () => {
     setShowPopup(!showPopup);
@@ -69,9 +68,9 @@ function HeaderP() {
           Post New Car
         </button>
 
-        <h3 className="font-semibold relative top-2">John Doe</h3>
+        <h3 className="font-semibold relative top-2">{data.username}</h3>
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinJi3cjJG8GZ7qGrj9hOf2YamiYtScEtmSOQabLkAEEVz3CxPC6l0xkLXV2SMQhvrH7I&usqp=CAU"
+          src={data.profilepic}
           alt=""
           className="h-10 w-10 rounded-full"
         />

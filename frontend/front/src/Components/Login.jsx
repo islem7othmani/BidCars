@@ -36,7 +36,7 @@ function Login() {
       console.log("Login successful:", result);
 
       // Navigate to '/Home'
-      navigate("/Profil");
+      navigate("/profile");
     } catch (error) {
       console.error("Error during login:", error.message);
     }
@@ -124,7 +124,7 @@ function Login() {
                         emailInc();
                       }}
                       className="w-full px-4 py-2 font-bold text-black bg-yellow-500 rounded-full hover:bg-yellow-700  focus:outline-none focus:shadow-outline"
-                      type="button"
+                      type="submit"
                     >
                       Log In
                     </button>

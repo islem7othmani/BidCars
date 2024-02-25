@@ -9,6 +9,8 @@ import DetailsCar from './Pages/DetailsCar';
 import CarsLive from './Pages/CarsLive';
 import Profile from './Pages/Profile';
 import PaiementC from './Pages/PaiementC';
+import Admin from './Pages/Admin';
+import AccountP from './Pages/AccountP';
 
 function App() {
 
@@ -24,6 +26,8 @@ function App() {
       <Route path="/live" element={<CarsLive/>} />
       <Route path="/profile" element={<Profile/>} />
       <Route path="/paiement" element={<PaiementC/>} />
+      <Route path="/admin" element={<Admin/>} />
+      <Route path="/adminAcc" element={<AccountP/>} />
       
       </Routes>
     </Router>
